@@ -2,7 +2,7 @@
   "name": "carrier-express",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "yarn && node server.js",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
