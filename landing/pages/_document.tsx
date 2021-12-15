@@ -4,7 +4,7 @@ import { getCssText } from '../stitches.config';
 export default class Document extends NextDocument {
   render() {
     return (
-      <Html lang="en">
+      <Html>
         <Head>
           <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssText() }} />
           <script data-respect-dnt async src="https://cdn.splitbee.io/sb.js" />

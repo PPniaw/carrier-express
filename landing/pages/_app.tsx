@@ -1,5 +1,13 @@
-import type { AppProps } from 'next/app'
+import type { AppProps } from 'next/app';
 
-export default function CarrierExpressLandingApp({ Component, pageProps }: AppProps) {
+import { appWithTranslation } from 'next-i18next';
+
+import { globalStyles } from '@utils/globalStyles';
+
+function CarrierExpressLandingApp({ Component, pageProps }: AppProps) {
+  globalStyles();
+
   return <Component {...pageProps} />
 }
+
+export default appWithTranslation(CarrierExpressLandingApp);
