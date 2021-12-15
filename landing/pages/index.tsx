@@ -1,16 +1,26 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
+import { GetStaticProps } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 
-import { TITLE, DESCRIPTION } from 'constant';
 import HeadMeta from '@utils/HeadMeta';
 import { Container } from '@components/layout';
 
 export default function Home() {
+  const { t } = useTranslation('landing');
+
   return(
     <>
       <HeadMeta />
-      <Container responsive={{ '@m768': 'max640', '@m1200': 'max1168' }}>Carrier Express</Container>
+      <Container responsive={{ '@m768': 'max640', '@m1200': 'max1168' }}>
+        Carrier Express
+        {t('link.home')}
+      </Container>
     </>
   )
 }
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: {
+    ...await serverSideTranslations(locale, ['landing']),
+  },
+});

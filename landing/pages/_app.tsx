@@ -4,10 +4,10 @@ import { appWithTranslation } from 'next-i18next';
 
 import { globalStyles } from '@utils/globalStyles';
 
-function CarrierExpressLandingApp({ Component, pageProps }: AppProps) {
+function CarrierExpressLanding({ Component, pageProps }: AppProps) {
   globalStyles();
 
   return <Component {...pageProps} />
 }
 
-export default appWithTranslation(CarrierExpressLandingApp);
+export default appWithTranslation(CarrierExpressLanding);

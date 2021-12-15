@@ -11,6 +11,7 @@ export const globalStyles = globalCss({
   },
 
   body: {
+    minHeight: '100vh',
     margin: 0,
     WebkitFontSmoothing: 'antialiased',
     MozOsxFontSmoothing: 'grayscale'
