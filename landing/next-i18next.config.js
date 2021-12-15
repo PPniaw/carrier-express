@@ -4,9 +4,6 @@ module.exports = {
     ns: ['landing'],
     defaultLocale: 'zh-Hant-TW',
     locales: ['zh-Hant-TW', 'en'],
-    ...(typeof window === undefined
-      ? { localePath: path.resolve('./public/locales') }
-      : {}),
     reloadOnPrerender: true,
     localeDetection: false
   }
