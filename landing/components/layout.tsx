@@ -1,22 +1,27 @@
 import { styled } from 'stitches.config';
 
 export const Container = styled('div', {
-  // marginX: '$auto',
   paddingX: '$16',
 
-  // variants: {
-  //   responsive: {
-  //     max640: {
-  //       maxWidth: '640px'
-  //     },
-  //     max960: {
-  //       maxWidth: '960px'
-  //     },
-  //     max1168: {
-  //       maxWidth: '1168px'
-  //     }
-  //   }
-  // }
+  variants: {
+    header: {
+      mobile: {
+        marginBottom: '$16',
+        paddingTop: '$12'
+      },
+      desktop: {
+        paddingTop: '24px'
+      }
+    },
+    footer: {
+      mobile: {
+        paddingBottom: '48px'
+      },
+      desktop: {
+        paddingBottom: '24px'
+      }
+    }
+  }
 });
 
 export const FullBlock = styled('section', {
