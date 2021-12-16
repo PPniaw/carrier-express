@@ -2,7 +2,7 @@ import { styled } from 'stitches.config';
 
 import { Container } from '@components/layout';
 
-const Tag = styled('span', {
+const Tag = styled('strong', {
   display: 'inline-block',
   color: 'hsl($shade20)',
   fontFamily: '$default',

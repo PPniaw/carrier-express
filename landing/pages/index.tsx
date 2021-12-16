@@ -21,8 +21,19 @@ const SloganMain = styled('h1', {
   margin: '0 0 $8',
   color: 'hsl($shade10)',
   fontFamily: '$default',
-  fontSize: '3.2rem',
-  lineHeight: '40px'
+
+  variants: {
+    responsive: {
+      mobile: {
+        fontSize: '3.2rem',
+        lineHeight: '40px',
+      },
+      tablet: {
+        fontSize: '4.8rem',
+        lineHeight: '56px',
+      }
+    }
+  }
 });
 
 const SloganAffix = styled('span', {
@@ -44,8 +55,8 @@ export default function Home() {
     <>
       <HeadMeta />
       <Header />
-      <Container as="main">
-        <SloganMain dangerouslySetInnerHTML={{__html: t('slogan.main')}} />
+      <Container as="main" main={{ '@initial': 'mobile', '@m992': 'desktop' }}>
+        <SloganMain responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} dangerouslySetInnerHTML={{__html: t('slogan.main')}} />
         <SloganAffix dangerouslySetInnerHTML={{__html: t('slogan.affix')}} />
       </Container>
       <Footer />

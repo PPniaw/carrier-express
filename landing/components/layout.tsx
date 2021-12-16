@@ -6,11 +6,19 @@ export const Container = styled('div', {
   variants: {
     header: {
       mobile: {
-        marginBottom: '$16',
+        marginBottom: '24px',
         paddingTop: '$12'
       },
       desktop: {
         paddingTop: '24px'
+      }
+    },
+    main: {
+      mobile: {
+        marginBottom: '48px'
+      },
+      desktop: {
+        paddingTop: '48px'
       }
     },
     footer: {
