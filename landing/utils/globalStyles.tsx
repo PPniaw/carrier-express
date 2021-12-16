@@ -11,9 +11,16 @@ export const globalStyles = globalCss({
   },
 
   body: {
-    minHeight: '100vh',
     margin: 0,
     WebkitFontSmoothing: 'antialiased',
     MozOsxFontSmoothing: 'grayscale'
+  },
+
+  '#__next': {
+    display: 'grid',
+    grid: 'auto 1fr auto / minmax(10px, 1168px)',
+    justifyItems: 'stretch',
+    justifyContent: 'center',
+    minHeight: '100vh',
   }
 });
