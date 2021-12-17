@@ -12,5 +12,19 @@
       "首頁",
     "register":
       "註冊"
+  },
+  "footer":
+  {
+    "link":
+    {
+      "contact":
+        "聯繫",
+      "privacy":
+        "您的隱私權",
+      "credit":
+        "引用素材",
+      "affix":
+        "還有{{privacy}}和{{credit}}"
+    }
   }
 }

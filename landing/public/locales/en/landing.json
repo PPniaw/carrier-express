@@ -12,5 +12,19 @@
       "Home",
     "register":
       "Register"
+  },
+  "footer":
+  {
+    "link":
+    {
+      "contact":
+        "Contact",
+      "privacy":
+        "Your Privacy",
+      "credit":
+        "Credits",
+      "affix":
+        "and {{privacy}} & {{credit}}"
+    }
   }
 }
