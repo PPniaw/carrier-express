@@ -13,6 +13,26 @@
     "register":
       "Register"
   },
+  "section":
+  {
+    "billing":
+    {
+      "title":
+        "Billing Notifications",
+      "affix":
+        "The commitment to your furry friends’ health"
+    },
+    "appoint":
+    {
+      "title":
+        "Then, just make an appointment"
+    },
+    "interested":
+    {
+      "title":
+        "Interested?"
+    }
+  },
   "footer":
   {
     "link":

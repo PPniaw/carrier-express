@@ -14,9 +14,15 @@ export default function Main() {
 
   return(
     <Container as="main" main={{ '@initial': 'mobile', '@m992': 'desktop' }}>
-      <Heading as="h1" slogan={{ '@initial': 'mobile', '@m768': 'tablet' }} purpose="mono" dangerouslySetInnerHTML={{__html: t('slogan.main')}} />
-      <Heading as="span" slogan="affix" dangerouslySetInnerHTML={{__html: t('slogan.affix')}} />
+      <Heading as="h1" loud={{ '@initial': 'mobile', '@m768': 'tablet' }} purpose="mono" dangerouslySetInnerHTML={{__html: t('slogan.main')}} />
+      <Heading as="span" loud="affix" dangerouslySetInnerHTML={{__html: t('slogan.affix')}} />
       <Hero />
+      <section>
+        <Heading as="h2" loud={{ '@initial': 'mobile', '@m768': 'tablet' }} purpose="accent" dangerouslySetInnerHTML={{__html: t('section.billing.title')}} />
+        <Heading as="span" loud="affix" dangerouslySetInnerHTML={{__html: t('section.billing.affix')}} />
+        <Heading as="h2" moderate purpose="mono" dangerouslySetInnerHTML={{__html: t('section.appoint.title')}} />
+        <Heading as="h2" loud={{ '@initial': 'mobile', '@m768': 'tablet' }} purpose="mono" dangerouslySetInnerHTML={{__html: t('section.interested.title')}} />
+      </section>
     </Container>
   )
 }

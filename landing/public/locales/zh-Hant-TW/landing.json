@@ -13,6 +13,26 @@
     "register":
       "註冊"
   },
+  "section":
+  {
+    "billing":
+    {
+      "title":
+        "扣款通知",
+      "affix":
+        "對貓、狗夥伴健康的承諾"
+    },
+    "appoint":
+    {
+      "title":
+        "之後，只要預約時間"
+    },
+    "interested":
+    {
+      "title":
+        "有興趣？"
+    }
+  },
   "footer":
   {
     "link":

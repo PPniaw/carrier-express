@@ -4,10 +4,18 @@ export const Heading = styled('h1', {
   fontFamily: '$default',
 
   variants: {
-    slogan: {
+    purpose: {
+      mono: {
+        color: 'hsl($shade10)'
+      },
+      accent: {
+        color: 'hsl($neon)'
+      }
+    },
+    loud: {
       mobile: {
         margin: '0 0 $8',
-        fontSize: '3.2rem',
+        fontSize: '$32',
         lineHeight: '40px',
       },
       tablet: {
@@ -16,15 +24,12 @@ export const Heading = styled('h1', {
       },
       affix: {
         color: 'hsl($shade30)',
-        fontSize: '2rem'
+        fontSize: '$20'
       }
     },
-    purpose: {
-      mono: {
-        color: 'hsl($shade10)'
-      },
-      accent: {
-        color: 'hsl($neon)'
+    moderate: {
+      true: {
+        fontSize: '$24'
       }
     }
   }
