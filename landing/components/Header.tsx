@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 import { styled } from 'stitches.config';
 
-import { Container } from '@components/layout';
+import { Container } from '@utils/layout';
 
 const LogoLink = styled('a', {
   display: 'inline-block'

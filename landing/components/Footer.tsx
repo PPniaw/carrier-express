@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import { styled } from 'stitches.config';
 
-import { Container, ListItem } from '@components/layout';
+import { Container, ListItem } from '@utils/layout';
 
 const Tag = styled('strong', {
   display: 'inline-block',
