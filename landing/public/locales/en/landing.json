@@ -21,6 +21,13 @@
         "Billing Notifications",
       "affix":
         "The commitment to your furry friends’ health",
+      "compare":
+        "Scheduling in a calendar is forgettable"
+    },
+    "appoint":
+    {
+      "title":
+        "Then, just make an appointment",
       "items":
       {
         "first":
@@ -39,11 +46,6 @@
             "OK for Old Cats/Dogs"
         }
       }
-    },
-    "appoint":
-    {
-      "title":
-        "Then, just make an appointment"
     },
     "interested":
     {
