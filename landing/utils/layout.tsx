@@ -15,7 +15,7 @@ export const Container = styled('div', {
     },
     main: {
       mobile: {
-        marginBottom: '48px'
+        marginBottom: '92px'
       },
       desktop: {
         paddingTop: '48px'

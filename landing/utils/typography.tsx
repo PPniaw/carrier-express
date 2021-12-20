@@ -22,17 +22,22 @@ export const Heading = styled('h1', {
         lineHeight: 1.1
       },
       affix: {
+        display: 'inline-block',
         color: 'hsl($shade20)',
-        fontSize: '$24'
+        fontSize: '$24',
+        fontWeight: 400
       }
     },
     moderate: {
       true: {
-        fontSize: '$24'
+        display: 'inline-block',
+        fontSize: '$24',
+        fontWeight: 400
       }
     },
     lowered: {
       true: {
+        display: 'inline-block',
         fontSize: '$20',
         fontWeight: 400
       }
@@ -40,6 +45,9 @@ export const Heading = styled('h1', {
     space: {
       slogan: {
         maxWidth: '20ch'
+      },
+      loweredTitle: {
+        marginBottom: '$8'
       }
     }
   }

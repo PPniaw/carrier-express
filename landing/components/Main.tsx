@@ -5,8 +5,44 @@ import { styled } from 'stitches.config';
 import { Container, Section, ListItem } from '@utils/layout';
 import { Heading } from '@utils/typography';
 
-const Hero = styled('figure', {
-  margin: '0 0 $16'
+// const Hero = styled('figure', {
+//   margin: '0 0 $16'
+// });
+
+const ComparedList = styled('ul', {
+  display: 'grid',
+  grid: 'auto / repeat(auto-fill, minmax(320px, 1fr))',
+  margin: 0,
+  padding: 0,
+
+  variants: {
+    responsive: {
+      mobile: {
+        gap: '$16 0'
+      },
+      tablet: {
+        gap: '0 $16'
+      }
+    }
+  }
+});
+
+const CompareImage = styled('img', {
+  display: 'block',
+
+  variants: {
+    responsive: {
+      mobile: {
+        maxWidth: 'calc(100% + 32px)',
+        margin: '0 -$16'
+      },
+      tablet: {
+        maxWidth: '320px',
+        margin: 0,
+        borderRadius: '12px'
+      }
+    }
+  }
 });
 
 const AppointsList = styled('ul', {
@@ -71,12 +107,20 @@ export default function Main() {
       <Section position="hasSiblings" purpose="aboveTheFold">
         <Heading as="h1" loud={{ '@initial': 'mobile' }} accent="heavy" space="slogan" dangerouslySetInnerHTML={{__html: t('slogan.main')}} />
         <Heading as="span" loud="affix" dangerouslySetInnerHTML={{__html: t('slogan.affix')}} />
-        <Hero />
+        {/* <Hero /> */}
       </Section>
       <Section position="hasSiblings">
         <Heading as="h2" loud={{ '@initial': 'mobile' }} accent="identity" space="slogan" dangerouslySetInnerHTML={{__html: t('section.billing.title')}} />
-        <Heading as="span" loud="affix" dangerouslySetInnerHTML={{__html: t('section.billing.affix')}} />
-        <Heading as="span" moderate accent="light" dangerouslySetInnerHTML={{__html: t('section.billing.compare')}} />
+        <ComparedList responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
+          <ListItem nomark>
+            <Heading as="strong" loud="affix" space="loweredTitle" dangerouslySetInnerHTML={{__html: t('section.billing.affix')}} />
+            <CompareImage responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} src='/compare/screenshotMail.jpg' loading="lazy" alt="" />
+          </ListItem>
+          <ListItem nomark>
+            <Heading as="strong" moderate accent="light" space="loweredTitle" dangerouslySetInnerHTML={{__html: t('section.billing.compare')}} />
+            <CompareImage responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} src='/compare/screenshotGCal.jpg' loading="lazy" alt="" />
+          </ListItem>
+        </ComparedList>
       </Section>
       <Section>
         <Heading as="h2" moderate accent="heavy" dangerouslySetInnerHTML={{__html: t('section.appoint.title')}} />
@@ -86,7 +130,7 @@ export default function Main() {
               <AppointItem nomark key={`appoint-${index}`}
                 alignright={{ '@initial': alignRight ? 'mobile' : undefined, '@m768': alignRight ? 'tablet' : undefined }}
               >
-                <AppointIcon src={icon} loading="lazy" />
+                <AppointIcon src={icon} loading="lazy" alt="" />
                 <Heading as="strong" lowered accent="light" dangerouslySetInnerHTML={{__html: title}} />
               </AppointItem>
             ))
