@@ -20,7 +20,25 @@
       "title":
         "Billing Notifications",
       "affix":
-        "The commitment to your furry friends’ health"
+        "The commitment to your furry friends’ health",
+      "items":
+      {
+        "first":
+        {
+          "title":
+            "Pay Animal Hospitals"
+        },
+        "second":
+        {
+          "title":
+            "Don’t Need to Claim"
+        },
+        "third":
+        {
+          "title":
+            "OK for Old Cats/Dogs"
+        }
+      }
     },
     "appoint":
     {

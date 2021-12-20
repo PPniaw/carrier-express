@@ -15,21 +15,22 @@ export const Heading = styled('h1', {
     loud: {
       mobile: {
         margin: '0 0 $8',
-        fontSize: '$32',
-        lineHeight: '40px',
-      },
-      tablet: {
-        fontSize: '4.8rem',
-        lineHeight: '56px',
+        fontSize: 'clamp(3.2rem, 4vw, 5rem)',
+        lineHeight: 1.1
       },
       affix: {
         color: 'hsl($shade30)',
-        fontSize: '$20'
+        fontSize: '$24'
       }
     },
     moderate: {
       true: {
         fontSize: '$24'
+      }
+    },
+    space: {
+      slogan: {
+        maxWidth: '20ch'
       }
     }
   }
