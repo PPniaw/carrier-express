@@ -32,13 +32,19 @@ export const Container = styled('div', {
   }
 });
 
-export const FullBlock = styled('section', {
-  marginBottom: '$16',
-  padding: '$24 0 $8',
-});
-
-export const FullLayout = styled('div', {
-  marginBottom: '64px',
+export const Section = styled('section', {
+  variants: {
+    position: {
+      hasSiblings: {
+        marginBottom: '48px'
+      }
+    },
+    purpose: {
+      aboveTheFold: {
+        minHeight: '64vh'
+      }
+    }
+  }
 });
 
 export const ListItem = styled('li', {

@@ -2,7 +2,7 @@ import { useTranslation } from 'next-i18next';
 
 import { styled } from 'stitches.config';
 
-import { Container, ListItem } from '@utils/layout';
+import { Container, Section, ListItem } from '@utils/layout';
 import { Heading } from '@utils/typography';
 
 const Hero = styled('figure', {
@@ -12,7 +12,7 @@ const Hero = styled('figure', {
 const AppointsList = styled('ul', {
   display: 'grid',
   grid: 'auto / repeat(auto-fit, minmax(200px, 1fr))',
-  margin: '0 0 $16',
+  margin: 0,
   padding: 0,
 
   variants: {
@@ -68,15 +68,17 @@ export default function Main() {
 
   return(
     <Container as="main" main={{ '@initial': 'mobile', '@m992': 'desktop' }}>
-      <Heading as="h1" loud={{ '@initial': 'mobile' }} accent="heavy" space="slogan" dangerouslySetInnerHTML={{__html: t('slogan.main')}} />
-      <Heading as="span" loud="affix" dangerouslySetInnerHTML={{__html: t('slogan.affix')}} />
-      <Hero />
-      <section>
+      <Section position="hasSiblings" purpose="aboveTheFold">
+        <Heading as="h1" loud={{ '@initial': 'mobile' }} accent="heavy" space="slogan" dangerouslySetInnerHTML={{__html: t('slogan.main')}} />
+        <Heading as="span" loud="affix" dangerouslySetInnerHTML={{__html: t('slogan.affix')}} />
+        <Hero />
+      </Section>
+      <Section position="hasSiblings">
         <Heading as="h2" loud={{ '@initial': 'mobile' }} accent="identity" space="slogan" dangerouslySetInnerHTML={{__html: t('section.billing.title')}} />
         <Heading as="span" loud="affix" dangerouslySetInnerHTML={{__html: t('section.billing.affix')}} />
         <Heading as="span" moderate accent="light" dangerouslySetInnerHTML={{__html: t('section.billing.compare')}} />
-      </section>
-      <section>
+      </Section>
+      <Section>
         <Heading as="h2" moderate accent="heavy" dangerouslySetInnerHTML={{__html: t('section.appoint.title')}} />
         <AppointsList responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
           {
@@ -90,10 +92,10 @@ export default function Main() {
             ))
           }
         </AppointsList>
-      </section>
-      <section>
+      </Section>
+      {/* <section>
         <Heading as="h2" loud={{ '@initial': 'mobile' }} accent="heavy" space="slogan" dangerouslySetInnerHTML={{__html: t('section.interested.title')}} />
-      </section>
+      </section> */}
     </Container>
   )
 }
