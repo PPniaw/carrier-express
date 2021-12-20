@@ -4,7 +4,7 @@
     "main":
       "Take Your Furry Friends to Health Checks Periodically",
     "affix":
-      "with the way you can’t ignore."
+      "💵 with the way you can’t ignore."
   },
   "link":
   {
@@ -12,5 +12,59 @@
       "Home",
     "register":
       "Register"
+  },
+  "section":
+  {
+    "billing":
+    {
+      "title":
+        "Billing Notifications",
+      "affix":
+        "🤙The commitment to your furry friends’ health",
+      "compare":
+        "🍕Scheduling in a calendar is forgettable"
+    },
+    "appoint":
+    {
+      "title":
+        "Then, just make an appointment",
+      "items":
+      {
+        "first":
+        {
+          "title":
+            "Pay Animal Hospitals"
+        },
+        "second":
+        {
+          "title":
+            "Don’t Need to Claim"
+        },
+        "third":
+        {
+          "title":
+            "OK for Old Cats/Dogs"
+        }
+      }
+    },
+    "interested":
+    {
+      "title":
+        "Interested?"
+    }
+  },
+  "footer":
+  {
+    "link":
+    {
+      "contact":
+        "Contact",
+      "privacy":
+        "Privacy",
+      "credit":
+        "Credits",
+      "affix":
+        "and {{privacy}} & {{credit}}"
+    }
   }
 }
