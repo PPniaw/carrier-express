@@ -4,6 +4,7 @@ import { styled } from 'stitches.config';
 
 import { Container, Section, ListItem } from '@utils/layout';
 import { Heading } from '@utils/typography';
+import MailingList from './MaillingList';
 
 // const Hero = styled('figure', {
 //   margin: '0 0 $16'
@@ -137,9 +138,10 @@ export default function Main() {
           }
         </AppointsList>
       </Section>
-      {/* <section>
+      <section>
         <Heading as="h2" loud={{ '@initial': 'mobile' }} accent="heavy" space="slogan" dangerouslySetInnerHTML={{__html: t('section.interested.title')}} />
-      </section> */}
+        <MailingList />
+      </section>
     </Container>
   )
 }
