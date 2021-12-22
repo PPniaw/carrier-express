@@ -12,7 +12,7 @@ export const Heading = styled('h1', {
         color: 'hsl($shade30)'
       },
       identity: {
-        color: 'hsl($neon)'
+        color: 'hsl($neon60)'
       }
     },
     loud: {

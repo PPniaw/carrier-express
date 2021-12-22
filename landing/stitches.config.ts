@@ -4,7 +4,8 @@ import { createStitches } from '@stitches/react';
 export const { css, styled, globalCss, createTheme, keyframes, getCssText } = createStitches({
   theme: {
     colors: {
-      neon: '236,92%,64%',
+      neon90: '236,92%,92%',
+      neon60: '236,92%,64%',
 
       shade120: '200,23%,97%',
       shade110: '200,18%,97%',

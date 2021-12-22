@@ -4,11 +4,7 @@ import { styled } from 'stitches.config';
 
 import { Container, Section, ListItem } from '@utils/layout';
 import { Heading } from '@utils/typography';
-import MailingList from './MaillingList';
-
-// const Hero = styled('figure', {
-//   margin: '0 0 $16'
-// });
+import MailingList from './MailingList';
 
 const ComparedList = styled('ul', {
   display: 'grid',
@@ -108,7 +104,6 @@ export default function Main() {
       <Section position="hasSiblings" purpose="aboveTheFold">
         <Heading as="h1" loud={{ '@initial': 'mobile' }} accent="heavy" space="slogan" dangerouslySetInnerHTML={{__html: t('slogan.main')}} />
         <Heading as="span" loud="affix" dangerouslySetInnerHTML={{__html: t('slogan.affix')}} />
-        {/* <Hero /> */}
       </Section>
       <Section position="hasSiblings">
         <Heading as="h2" loud={{ '@initial': 'mobile' }} accent="identity" space="slogan" dangerouslySetInnerHTML={{__html: t('section.billing.title')}} />
@@ -123,7 +118,7 @@ export default function Main() {
           </ListItem>
         </ComparedList>
       </Section>
-      <Section>
+      <Section position="hasSiblings">
         <Heading as="h2" moderate accent="heavy" dangerouslySetInnerHTML={{__html: t('section.appoint.title')}} />
         <AppointsList responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
           {
@@ -138,10 +133,11 @@ export default function Main() {
           }
         </AppointsList>
       </Section>
-      <section>
+      <Section>
         <Heading as="h2" loud={{ '@initial': 'mobile' }} accent="heavy" space="slogan" dangerouslySetInnerHTML={{__html: t('section.interested.title')}} />
+        <Heading as="strong" loud="affix" space="loweredTitle" dangerouslySetInnerHTML={{__html: t('section.interested.affix')}} />
         <MailingList />
-      </section>
+      </Section>
     </Container>
   )
 }
