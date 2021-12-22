@@ -5,18 +5,16 @@ import { styled } from 'stitches.config';
 
 const Figure = styled('figure', {
   overflow: 'hidden',
+  margin: 0,
   padding: 0,
   borderRadius: '12px',
 
   variants: {
     screenshot: {
       mobile: {
-        margin: 0,
         border: '1px solid hsl($shade60)'
       },
       tablet: {
-        maxWidth: '768px',
-        margin: '0 auto',
         borderColor: 'transparent'
       }
     }
@@ -33,7 +31,7 @@ export default function Hero() {
         }
         {
           screenTablet &&
-          <Image layout="responsive" width={35} height={23} src="/hero/tablet.webp" alt="Demo of Tablet Screen" />
+          <Image layout="responsive" width={175} height={69} src="/hero/tablet.webp" alt="Demo of Tablet Screen" />
         }
       </Figure>
     </>
