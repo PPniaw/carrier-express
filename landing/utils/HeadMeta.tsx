@@ -36,7 +36,7 @@ function HeadMeta({ title, description, canonical, ogCover }: HeadMetaProps) {
             url: 'https://carrier.express',
             name: '外出籠規畫',
             datePublished: '2021-12-10',
-            dateModified: '2021-12-15',
+            dateModified: '2021-12-23',
             publisher: {
               '@type': 'Organization',
               name: 'Intersection',
