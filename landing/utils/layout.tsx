@@ -38,11 +38,6 @@ export const Section = styled('section', {
       hasSiblings: {
         marginBottom: '48px'
       }
-    },
-    purpose: {
-      aboveTheFold: {
-        minHeight: '64vh'
-      }
     }
   }
 });

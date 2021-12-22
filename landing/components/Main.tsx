@@ -3,6 +3,7 @@ import { useTranslation } from 'next-i18next';
 import { styled } from 'stitches.config';
 
 import { Container, Section, ListItem } from '@utils/layout';
+import Hero from '@components/Hero';
 import { Heading } from '@utils/typography';
 import MailingList from './MailingList';
 
@@ -101,9 +102,10 @@ export default function Main() {
 
   return(
     <Container as="main" main={{ '@initial': 'mobile', '@m992': 'desktop' }}>
-      <Section position="hasSiblings" purpose="aboveTheFold">
+      <Section position="hasSiblings">
         <Heading as="h1" loud={{ '@initial': 'mobile' }} accent="heavy" space="slogan" dangerouslySetInnerHTML={{__html: t('slogan.main')}} />
-        <Heading as="span" loud="affix" dangerouslySetInnerHTML={{__html: t('slogan.affix')}} />
+        <Heading as="span" loud="affix" space="loweredTitle" dangerouslySetInnerHTML={{__html: t('slogan.affix')}} />
+        <Hero />
       </Section>
       <Section position="hasSiblings">
         <Heading as="h2" loud={{ '@initial': 'mobile' }} accent="identity" space="slogan" dangerouslySetInnerHTML={{__html: t('section.billing.title')}} />
