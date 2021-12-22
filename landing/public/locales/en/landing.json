@@ -4,7 +4,7 @@
     "main":
       "Take Your Furry Friends to Health Checks Periodically",
     "affix":
-      "💵 with the way you can’t ignore."
+      "with the way you can’t ignore 💵"
   },
   "link":
   {
@@ -20,9 +20,9 @@
       "title":
         "Billing Notifications",
       "affix":
-        "🤙The commitment to your furry friends’ health",
+        "The commitment to your furry friends’ health 🤙",
       "compare":
-        "🍕Scheduling in a calendar is forgettable"
+        "Scheduling in a calendar is forgettable 🍕"
     },
     "appoint":
     {
@@ -50,7 +50,22 @@
     "interested":
     {
       "title":
-        "Interested?"
+        "Interested?",
+      "affix":
+        "Coming Soon! Please Stay Connected 📬",
+      "guarantee":
+        "News on Carrier Express Only.",
+      "form":
+      {
+        "email":
+          "Email Address",
+        "action":
+          "Subscribe",
+        "success":
+          "✔ Success!",
+        "error":
+          "It’s Blank!"
+      }
     }
   },
   "footer":
