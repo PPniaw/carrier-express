@@ -29,13 +29,21 @@ const CompareImage = styled('img', {
   display: 'block',
 
   variants: {
+    purpose: {
+      mail: {
+        minHeight: '86px'
+      },
+      calendar: {
+        minHeight: '180px'
+      }
+    },
     responsive: {
       mobile: {
         maxWidth: 'calc(100% + 32px)',
         margin: '0 -$16'
       },
       tablet: {
-        maxWidth: '320px',
+        maxWidth: '360px',
         margin: 0,
         borderRadius: '12px'
       }
@@ -112,11 +120,11 @@ export default function Main() {
         <ComparedList responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
           <ListItem nomark>
             <Heading as="strong" loud="affix" space="loweredTitle" dangerouslySetInnerHTML={{__html: t('section.billing.affix')}} />
-            <CompareImage responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} src='/compare/screenshotMail.jpg' loading="lazy" alt="" />
+            <CompareImage responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} src='/compare/screenshotMail.jpg' loading="lazy" purpose="mail" alt="" />
           </ListItem>
           <ListItem nomark>
             <Heading as="strong" moderate accent="light" space="loweredTitle" dangerouslySetInnerHTML={{__html: t('section.billing.compare')}} />
-            <CompareImage responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} src='/compare/screenshotGCal.jpg' loading="lazy" alt="" />
+            <CompareImage responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} src='/compare/screenshotGCal.jpg' loading="lazy" purpose="calendar" alt="" />
           </ListItem>
         </ComparedList>
       </Section>
