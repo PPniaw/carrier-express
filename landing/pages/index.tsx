@@ -10,19 +10,7 @@ import Header from '@components/Header';
 import Main from '@components/Main';
 import Footer from '@components/Footer';
 
-const pageBody = globalCss({
-  'body[data-body-style=home]': {
-    backgroundColor: 'hsl($shade120)'
-  }
-});
-
 export default function Home() {
-  useEffect(() => {
-    document.body.setAttribute('data-body-style', 'home');
-  });
-
-  pageBody();
-
   return(
     <>
       <HeadMeta />
