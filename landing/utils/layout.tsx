@@ -16,11 +16,29 @@ export const Container = styled('div', {
     main: {
       mobile: {
         marginBottom: '92px',
-        paddingX: '$16',
+        paddingX: '$16'
       },
       desktop: {
         paddingX: '$0',
         paddingTop: '48px'
+      }
+    },
+    contact: {
+      mobile: {
+        display: 'grid',
+        grid: `"contact"
+               "privacy"
+               "credit"`,
+        gap: '32px 48px',
+        marginBottom: '92px',
+        paddingX: '$16'
+      },
+      tablet: {
+        grid: `"contact credit" 180px
+               "privacy credit" auto / 7fr 3fr`,
+      },
+      desktop: {
+        paddingX: '$0'
       }
     },
     footer: {
@@ -45,6 +63,17 @@ export const Section = styled('section', {
       hasSiblings: {
         marginBottom: '64px',
       }
+    },
+    contactsection: {
+      contact: {
+        gridArea: 'contact'
+      },
+      privacy: {
+        gridArea: 'privacy'
+      },
+      credit: {
+        gridArea: 'credit'
+      },
     }
   }
 });

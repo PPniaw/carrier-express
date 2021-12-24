@@ -52,3 +52,14 @@ export const Heading = styled('h1', {
     }
   }
 });
+
+export const Paragraph = styled('p', {
+  margin: 0,
+  color: 'hsl($shade30)',
+  fontFamily: '$default',
+  fontSize: '$16'
+});
+
+export const ParagraphLink = styled('a', {
+  color: 'hsl($neon60)'
+});
