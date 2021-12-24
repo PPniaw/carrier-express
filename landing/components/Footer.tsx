@@ -48,7 +48,7 @@ export default function Footer() {
   }];
 
   return(
-    <Container as="footer" footer={{ '@initial': 'mobile', '@m992': 'desktop' }}>
+    <Container as="footer" footer={{ '@initial': 'mobile', '@m1200': 'desktop' }}>
       <Tag>&copy; 外出籠規畫 Carrier Express {Year}</Tag>
       <LinksList>
       {

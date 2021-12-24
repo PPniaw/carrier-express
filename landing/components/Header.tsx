@@ -11,7 +11,7 @@ const LogoLink = styled('a', {
 
 export default function Header() {
   return(
-    <Container as="header" header={{ '@initial': 'mobile', '@m992': 'desktop' }}>
+    <Container as="header" header={{ '@initial': 'mobile', '@m1200': 'desktop' }}>
       <Link href="/" passHref>
         <LogoLink>
           <Image src="/logo.svg" width={144} height={40} alt="外出籠規畫" />
