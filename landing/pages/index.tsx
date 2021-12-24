@@ -1,8 +1,5 @@
-import { useEffect } from 'react';
 import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-
-import { globalCss } from 'stitches.config';
 
 import HeadMeta from '@utils/HeadMeta';
 
