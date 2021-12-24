@@ -12,6 +12,8 @@ export const globalStyles = globalCss({
 
   body: {
     margin: 0,
+    backgroundColor: 'hsl($shade120)',
+    overflowY: 'scroll',
     WebkitFontSmoothing: 'antialiased',
     MozOsxFontSmoothing: 'grayscale'
   },
