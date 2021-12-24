@@ -24,8 +24,15 @@ const EmailInput = styled('input', {
   fontSize: '$16',
   lineHeight: '16px',
   backgroundColor: 'hsl($shade120)',
-  border: '2px solid hsl($neon60)',
-  borderRadius: '8px'
+  border: '2px solid hsl($shade60)',
+  borderRadius: '8px',
+  outline: 'none',
+  transition: 'border-color 0.2s ease-out',
+
+  '&:focus': {
+    borderColor: 'hsl($neon60)',
+    transition: 'border-color 0.2s ease-in'
+  }
 });
 
 const EmailAction = styled('button', {
