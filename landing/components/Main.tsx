@@ -9,6 +9,7 @@ import MailingList from './MailingList';
 
 const ComparedList = styled('ul', {
   display: 'grid',
+  minHeight: '428px',
   rowGap: '32px',
   margin: 0,
   padding: 0
