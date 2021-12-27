@@ -1,7 +1,7 @@
+import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 
 import { styled } from 'stitches.config';
-
 import { Container, Section, ListItem } from '@utils/layout';
 import { Heading } from '@utils/typography';
 import Hero from '@components/Hero';
@@ -9,6 +9,7 @@ import MailingList from './MailingList';
 
 const ComparedList = styled('ul', {
   display: 'grid',
+  minHeight: '428px',
   rowGap: '32px',
   margin: 0,
   padding: 0
@@ -19,36 +20,14 @@ const CompareItem = styled(ListItem, {
     responsive: {
       tablet: {
         display: 'grid',
-        grid: 'auto / minmax(360px, max-content) 1fr'
+        grid: 'auto / minmax(450px, max-content) 1fr'
       }
     }
   }
 });
 
-const CompareImage = styled('img', {
-  display: 'block',
-
-  variants: {
-    purpose: {
-      mail: {
-        minHeight: '86px'
-      },
-      calendar: {
-        minHeight: '180px'
-      }
-    },
-    responsive: {
-      mobile: {
-        maxWidth: 'calc(100% + 32px)',
-        margin: '0 -$16'
-      },
-      tablet: {
-        maxWidth: '400px',
-        margin: 0,
-        borderRadius: '12px'
-      }
-    }
-  }
+const CompareImage = styled(Image, {
+  borderRadius: '12px'
 });
 
 const AppointsList = styled('ul', {
@@ -83,7 +62,8 @@ const AppointItem = styled(ListItem, {
 });
 
 const AppointIcon = styled('img', {
-  display: 'block'
+  display: 'block',
+  size: '$48'
 });
 
 export default function Main() {
@@ -120,11 +100,11 @@ export default function Main() {
         <ComparedList>
           <CompareItem nomark responsive={{ '@m768': 'tablet' }}>
             <Heading as="strong" loud="affix" space="loweredTitle" dangerouslySetInnerHTML={{__html: t('section.billing.affix')}} />
-            <CompareImage responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} src='/compare/screenshotMail.jpg' loading="lazy" purpose="mail" alt="" />
+            <CompareImage src="/compare/screenshotMail.jpg" width={2} height={1} layout="responsive" quality={92} alt="" />
           </CompareItem>
           <CompareItem nomark responsive={{ '@m768': 'tablet' }}>
             <Heading as="strong" moderate accent="light" space="loweredTitle" dangerouslySetInnerHTML={{__html: t('section.billing.compare')}} />
-            <CompareImage responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} src='/compare/screenshotGCal.jpg' loading="lazy" purpose="calendar" alt="" />
+            <CompareImage src="/compare/screenshotGCal.jpg" width={2} height={1} layout="responsive" quality={92} alt="" />
           </CompareItem>
         </ComparedList>
       </Section>
