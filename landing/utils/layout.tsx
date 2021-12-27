@@ -58,10 +58,10 @@ export const Section = styled('section', {
   variants: {
     position: {
       asHero: {
-        marginBottom: '96px',
+        marginBottom: '120px',
       },
       hasSiblings: {
-        marginBottom: '64px',
+        marginBottom: '92px',
       }
     },
     contactsection: {

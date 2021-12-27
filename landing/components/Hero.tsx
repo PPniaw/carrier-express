@@ -31,7 +31,7 @@ export default function Hero() {
         }
         {
           screenTablet &&
-          <Image layout="responsive" width={175} height={69} src="/hero/tablet.webp" alt="Demo of Tablet Screen" />
+          <Image layout="responsive" width={175} height={72} src="/hero/tablet.webp" alt="Demo of Tablet Screen" />
         }
       </Figure>
     </>

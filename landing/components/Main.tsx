@@ -9,17 +9,17 @@ import MailingList from './MailingList';
 
 const ComparedList = styled('ul', {
   display: 'grid',
-  grid: 'auto / repeat(auto-fill, minmax(320px, 1fr))',
+  rowGap: '32px',
   margin: 0,
-  padding: 0,
+  padding: 0
+});
 
+const CompareItem = styled(ListItem, {
   variants: {
     responsive: {
-      mobile: {
-        gap: '$16 0'
-      },
       tablet: {
-        gap: '0 $16'
+        display: 'grid',
+        grid: 'auto / minmax(360px, max-content) 1fr'
       }
     }
   }
@@ -43,7 +43,7 @@ const CompareImage = styled('img', {
         margin: '0 -$16'
       },
       tablet: {
-        maxWidth: '360px',
+        maxWidth: '400px',
         margin: 0,
         borderRadius: '12px'
       }
@@ -117,15 +117,15 @@ export default function Main() {
       </Section>
       <Section position="hasSiblings">
         <Heading as="h2" loud={{ '@initial': 'mobile' }} accent="identity" space="slogan" dangerouslySetInnerHTML={{__html: t('section.billing.title')}} />
-        <ComparedList responsive={{ '@initial': 'mobile', '@m768': 'tablet' }}>
-          <ListItem nomark>
+        <ComparedList>
+          <CompareItem nomark responsive={{ '@m768': 'tablet' }}>
             <Heading as="strong" loud="affix" space="loweredTitle" dangerouslySetInnerHTML={{__html: t('section.billing.affix')}} />
             <CompareImage responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} src='/compare/screenshotMail.jpg' loading="lazy" purpose="mail" alt="" />
-          </ListItem>
-          <ListItem nomark>
+          </CompareItem>
+          <CompareItem nomark responsive={{ '@m768': 'tablet' }}>
             <Heading as="strong" moderate accent="light" space="loweredTitle" dangerouslySetInnerHTML={{__html: t('section.billing.compare')}} />
             <CompareImage responsive={{ '@initial': 'mobile', '@m768': 'tablet' }} src='/compare/screenshotGCal.jpg' loading="lazy" purpose="calendar" alt="" />
-          </ListItem>
+          </CompareItem>
         </ComparedList>
       </Section>
       <Section position="hasSiblings">
