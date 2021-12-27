@@ -16,7 +16,7 @@ export default function Contact() {
       <Section contactsection="privacy">
         <Heading as="h2" loud={{ '@initial': 'mobile' }} accent="heavy">隱私權</Heading>
         <Paragraph>
-          此專案透過 <Link href="https://splitbee.io" passHref><ParagraphLink rel="noopener" target="_blank">Splitbee</ParagraphLink></Link> 進行設計研究。記錄的資料不會被再利用或販售至第三方。
+          此專案透過 <Link href="https://splitbee.io" passHref><ParagraphLink rel="noopener" target="_blank">Splitbee</ParagraphLink></Link> 進行設計研究，以及參考 <Link href="https://vercel.com/analytics" passHref><ParagraphLink rel="noopener" target="_blank">Vercel Analytics</ParagraphLink></Link> 提供的瀏覽體驗。記錄的資料不會被再利用或販售至第三方。
         </Paragraph>
       </Section>
       <Section contactsection="credit">
