@@ -100,11 +100,15 @@ export default function Main() {
         <ComparedList>
           <CompareItem nomark responsive={{ '@m768': 'tablet' }}>
             <Heading as="strong" loud="affix" space="loweredTitle" dangerouslySetInnerHTML={{__html: t('section.billing.affix')}} />
-            <CompareImage src="/compare/screenshotMail.jpg" width={2} height={1} layout="responsive" quality={92} alt="" />
+            <div>
+              <CompareImage src="/compare/screenshotMail.jpg" width={2} height={1} layout="responsive" quality={92} alt="" />
+            </div>
           </CompareItem>
           <CompareItem nomark responsive={{ '@m768': 'tablet' }}>
             <Heading as="strong" moderate accent="light" space="loweredTitle" dangerouslySetInnerHTML={{__html: t('section.billing.compare')}} />
-            <CompareImage src="/compare/screenshotGCal.jpg" width={2} height={1} layout="responsive" quality={92} alt="" />
+            <div>
+              <CompareImage src="/compare/screenshotGCal.jpg" width={2} height={1} layout="responsive" quality={92} alt="" />
+            </div>
           </CompareItem>
         </ComparedList>
       </Section>
