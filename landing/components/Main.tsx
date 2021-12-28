@@ -98,7 +98,7 @@ export default function Main() {
         <Heading as="span" loud="affix" space="loweredTitle" dangerouslySetInnerHTML={{__html: t('slogan.affix')}} />
         <Hero />
       </Section>
-      <Section position="hasSiblings">
+      <Section position="hasSiblings" fix="cls">
         <Heading as="h2" loud={{ '@initial': 'mobile' }} accent="identity" space="slogan" dangerouslySetInnerHTML={{__html: t('section.billing.title')}} />
         <ComparedList>
           <CompareItem nomark responsive={{ '@m768': 'tablet' }}>
