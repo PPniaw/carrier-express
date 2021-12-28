@@ -30,11 +30,11 @@ export default function Hero() {
       <Figure screenshot={{ '@initial': 'mobile', '@m768': 'tablet' }}>
         {
           screenMobile &&
-          <Image layout="responsive" width={375} height={812} src={mobile} quality={92} alt="Demo of Mobile Screen" />
+          <Image layout="responsive" src={mobile} quality={92} alt="Demo of Mobile Screen" />
         }
         {
           screenTablet &&
-          <Image layout="responsive" width={175} height={72} src={tablet} quality={92} alt="Demo of Tablet Screen" />
+          <Image layout="responsive" src={tablet} quality={92} alt="Demo of Tablet Screen" />
         }
       </Figure>
     </>
