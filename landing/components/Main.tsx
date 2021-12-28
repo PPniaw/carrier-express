@@ -7,6 +7,9 @@ import { Heading } from '@utils/typography';
 import Hero from '@components/Hero';
 import MailingList from './MailingList';
 
+import screenshotMail from '/public/compare/screenshotMail.jpg'
+import screenshotGCal from '/public/compare/screenshotGCal.jpg'
+
 const ComparedList = styled('ul', {
   display: 'grid',
   minHeight: '428px',
@@ -95,19 +98,19 @@ export default function Main() {
         <Heading as="span" loud="affix" space="loweredTitle" dangerouslySetInnerHTML={{__html: t('slogan.affix')}} />
         <Hero />
       </Section>
-      <Section position="hasSiblings">
+      <Section position="hasSiblings" fix="cls">
         <Heading as="h2" loud={{ '@initial': 'mobile' }} accent="identity" space="slogan" dangerouslySetInnerHTML={{__html: t('section.billing.title')}} />
         <ComparedList>
           <CompareItem nomark responsive={{ '@m768': 'tablet' }}>
             <Heading as="strong" loud="affix" space="loweredTitle" dangerouslySetInnerHTML={{__html: t('section.billing.affix')}} />
             <div>
-              <CompareImage src="/compare/screenshotMail.jpg" width={1400} height={700} layout="responsive" quality={92} alt="" />
+              <CompareImage src={screenshotMail} layout="responsive" quality={92} alt="" />
             </div>
           </CompareItem>
           <CompareItem nomark responsive={{ '@m768': 'tablet' }}>
             <Heading as="strong" moderate accent="light" space="loweredTitle" dangerouslySetInnerHTML={{__html: t('section.billing.compare')}} />
             <div>
-              <CompareImage src="/compare/screenshotGCal.jpg" width={1400} height={700} layout="responsive" quality={92} alt="" />
+              <CompareImage src={screenshotGCal} layout="responsive" quality={92} alt="" />
             </div>
           </CompareItem>
         </ComparedList>
