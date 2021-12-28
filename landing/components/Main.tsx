@@ -7,6 +7,9 @@ import { Heading } from '@utils/typography';
 import Hero from '@components/Hero';
 import MailingList from './MailingList';
 
+import screenshotMail from '/public/compare/screenshotMail.jpg'
+import screenshotGCal from '/public/compare/screenshotGCal.jpg'
+
 const ComparedList = styled('ul', {
   display: 'grid',
   minHeight: '428px',
@@ -101,13 +104,13 @@ export default function Main() {
           <CompareItem nomark responsive={{ '@m768': 'tablet' }}>
             <Heading as="strong" loud="affix" space="loweredTitle" dangerouslySetInnerHTML={{__html: t('section.billing.affix')}} />
             <div>
-              <CompareImage src="/compare/screenshotMail.jpg" width={1400} height={700} layout="responsive" quality={92} alt="" />
+              <CompareImage src={screenshotMail} width={1400} height={700} layout="responsive" quality={92} alt="" />
             </div>
           </CompareItem>
           <CompareItem nomark responsive={{ '@m768': 'tablet' }}>
             <Heading as="strong" moderate accent="light" space="loweredTitle" dangerouslySetInnerHTML={{__html: t('section.billing.compare')}} />
             <div>
-              <CompareImage src="/compare/screenshotGCal.jpg" width={1400} height={700} layout="responsive" quality={92} alt="" />
+              <CompareImage src={screenshotGCal} width={1400} height={700} layout="responsive" quality={92} alt="" />
             </div>
           </CompareItem>
         </ComparedList>
