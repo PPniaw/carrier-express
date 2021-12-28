@@ -3,6 +3,9 @@ import { screenMobile, screenTablet } from '@utils/screens';
 
 import { styled } from 'stitches.config';
 
+import mobile from '/public/hero/mobile.webp';
+import tablet from '/public/hero/tablet.webp';
+
 const Figure = styled('figure', {
   overflow: 'hidden',
   margin: 0,
@@ -27,11 +30,11 @@ export default function Hero() {
       <Figure screenshot={{ '@initial': 'mobile', '@m768': 'tablet' }}>
         {
           screenMobile &&
-          <Image layout="responsive" width={375} height={812} src="/hero/mobile.webp" quality={92} alt="Demo of Mobile Screen" />
+          <Image layout="responsive" width={375} height={812} src={mobile} quality={92} alt="Demo of Mobile Screen" />
         }
         {
           screenTablet &&
-          <Image layout="responsive" width={175} height={72} src="/hero/tablet.webp" quality={92} alt="Demo of Tablet Screen" />
+          <Image layout="responsive" width={175} height={72} src={tablet} quality={92} alt="Demo of Tablet Screen" />
         }
       </Figure>
     </>
