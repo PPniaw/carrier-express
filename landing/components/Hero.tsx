@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { screenMobile, screenTablet } from '@utils/screens';
+import { useTranslation } from 'next-i18next';
 
 import { styled } from 'stitches.config';
 
@@ -13,6 +13,14 @@ const Figure = styled('figure', {
   borderRadius: '12px',
 
   variants: {
+    display: {
+      none: {
+        display: 'none'
+      },
+      block: {
+        display: 'block'
+      }
+    },
     screenshot: {
       mobile: {
         border: '1px solid hsl($shade60)'
@@ -25,17 +33,15 @@ const Figure = styled('figure', {
 });
 
 export default function Hero() {
+  const { t } = useTranslation('landing');
+
   return(
     <>
-      <Figure screenshot={{ '@initial': 'mobile', '@m768': 'tablet' }}>
-        {
-          screenMobile &&
-          <Image layout="responsive" src={mobile} quality={92} alt="Demo of Mobile Screen" />
-        }
-        {
-          screenTablet &&
-          <Image layout="responsive" src={tablet} quality={92} alt="Demo of Tablet Screen" />
-        }
+      <Figure screenshot={{ '@initial': 'mobile', '@m768': 'tablet' }} display={{ '@m768': 'none' }}>
+        <Image layout="responsive" src={mobile} quality={92} alt={t('hero.mobile')} />
+      </Figure>
+      <Figure screenshot={{ '@initial': 'mobile', '@m768': 'tablet' }}  display={{ '@initial': 'none', '@m768': 'block' }}>
+        <Image layout="responsive" src={tablet} quality={92} alt={t('hero.tablet')} />
       </Figure>
     </>
   )

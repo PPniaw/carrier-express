@@ -74,11 +74,6 @@ export const Section = styled('section', {
       credit: {
         gridArea: 'credit'
       },
-    },
-    fix: {
-      cls: {
-        minHeight: '528px'
-      }
     }
   }
 });

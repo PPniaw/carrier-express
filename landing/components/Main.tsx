@@ -12,7 +12,6 @@ import screenshotGCal from '/public/compare/screenshotGCal.jpg'
 
 const ComparedList = styled('ul', {
   display: 'grid',
-  minHeight: '428px',
   rowGap: '32px',
   margin: 0,
   padding: 0
@@ -98,7 +97,7 @@ export default function Main() {
         <Heading as="span" loud="affix" space="loweredTitle" dangerouslySetInnerHTML={{__html: t('slogan.affix')}} />
         <Hero />
       </Section>
-      <Section position="hasSiblings" fix="cls">
+      <Section position="hasSiblings">
         <Heading as="h2" loud={{ '@initial': 'mobile' }} accent="identity" space="slogan" dangerouslySetInnerHTML={{__html: t('section.billing.title')}} />
         <ComparedList>
           <CompareItem nomark responsive={{ '@m768': 'tablet' }}>

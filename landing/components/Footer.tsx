@@ -27,6 +27,7 @@ const FooterLink = styled('a', {
 
 const FooterLinkName = styled('strong', {
   display: 'block',
+  marginBottom: '$4',
   fontSize: '1.6rem',
   color: 'hsl($shade20)'
 });
