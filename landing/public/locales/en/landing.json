@@ -6,12 +6,12 @@
     "affix":
       "with the way you can’t ignore 💵"
   },
-  "link":
+  "hero":
   {
-    "home":
-      "Home",
-    "register":
-      "Register"
+    "mobile":
+      "Demo of Carrier Express for Mobile Screen",
+    "tablet":
+      "Demo of Carrier Express for Tablet Screen"
   },
   "section":
   {

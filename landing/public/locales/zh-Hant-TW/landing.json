@@ -6,12 +6,12 @@
     "affix":
       "用您最在意的方式 💵"
   },
-  "link":
+  "hero":
   {
-    "home":
-      "首頁",
-    "register":
-      "註冊"
+    "mobile":
+      "Carrier Express 手機版展示畫面",
+    "tablet":
+      "Carrier Express 平板電腦版展示畫面"
   },
   "section":
   {
