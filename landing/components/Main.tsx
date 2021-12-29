@@ -7,8 +7,8 @@ import { Heading } from '@utils/typography';
 import Hero from '@components/Hero';
 import MailingList from './MailingList';
 
-import screenshotMail from '/public/compare/screenshotMail.jpg'
-import screenshotGCal from '/public/compare/screenshotGCal.jpg'
+import screenshotMail from '/public/compare/screenshotMail.jpg';
+import screenshotGCal from '/public/compare/screenshotGCal.jpg';
 
 const ComparedList = styled('ul', {
   display: 'grid',
@@ -63,7 +63,7 @@ const AppointItem = styled(ListItem, {
   }
 });
 
-const AppointIcon = styled('img', {
+const AppointIcon = styled('svg', {
   display: 'block',
   size: '$48'
 });
@@ -71,20 +71,16 @@ const AppointIcon = styled('img', {
 export default function Main() {
   const { t } = useTranslation('landing');
 
-  const iconCoin = '/appoints/iconCoin.svg';
-  const iconDetour = '/appoints/iconDetour.svg';
-  const icon12Plus = '/appoints/icon12Plus.svg';
-
   const AppointItems = [{
-      icon: iconCoin,
+      icon: 'iconCoin',
       title: t('section.appoint.items.first.title'),
       alignRight: false
     }, {
-      icon: iconDetour,
+      icon: 'iconDetour',
       title: t('section.appoint.items.second.title'),
       alignRight: true
     }, {
-      icon: icon12Plus,
+      icon: 'icon12Plus',
       title: t('section.appoint.items.third.title'),
       alignRight: false
     }
@@ -122,7 +118,9 @@ export default function Main() {
               <AppointItem nomark key={`appoint-${index}`}
                 alignright={{ '@initial': alignRight ? 'mobile' : undefined, '@m768': alignRight ? 'tablet' : undefined }}
               >
-                <AppointIcon src={icon} loading="lazy" alt="" />
+                <AppointIcon>
+                  <use xlinkHref={`/appointSprite.svg#${icon}`} />
+                </AppointIcon>
                 <Heading as="strong" lowered accent="light" dangerouslySetInnerHTML={{__html: title}} />
               </AppointItem>
             ))
